@@ -1,0 +1,45 @@
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  text-decoration: none;
+  border: 0.2rem solid $main-color;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: $main-color;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+
+  &:hover {
+    background: $main-color;
+    color: $second-bg-color;
+    box-shadow: 0 0 1rem $main-color;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem $main-color;
+  background: $main-color;
+  font-size: 1.6rem;
+  color: $second-bg-color;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+
+  &:hover {
+    box-shadow: none;
+    background: $main-color;
+    color: $black;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.4rem;
+    padding: 1rem 2.5rem;
+  }
+}

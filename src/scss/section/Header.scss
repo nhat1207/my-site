@@ -1,0 +1,41 @@
+@import "./variables";
+header {
+  z-index: 3;
+}
+.navbar {
+  width: 100%;
+  background-color: #bcf1c1 !important; /* Màu nền cho navbar */
+
+  .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+
+    .nav-item {
+      margin-left: 4rem;
+
+      .nav-link {
+        font-size: 1.7rem;
+        color: #333;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &:hover {
+          color: #007bff;
+        }
+
+        &.active {
+          color: #007bff;
+        }
+      }
+    }
+  }
+}

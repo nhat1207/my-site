@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+// MY THEME COLORS
+
+$purple-dark: #9926f0;
+$purple-light: #bb6ef5;
+
+$pink: #d122e3;
+
+// white and gray color
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+$main-color: #0ef;
+$bg-color: #1f242d;
+$second-bg-color: #323946;
+$third-bg-color: #fff4a3;
+$four-bg-color: #ffc0c7;
+$five-bg-color: #96d4d4;
+$six-bg-color: #d9eee1;
+
+$primary: $purple-dark;
+$secondary: $pink;
+$font-family: "Poppins", sans-serif;
+
+//ACCORDION OVERRIDES
+$accordion-icon-color: $primary;
+$accordion-icon-active-color: $secondary;
+
+$accordion-icon-width: 5.875rem;
+$accordion-bg: $white;
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>") !default;
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>") !default;

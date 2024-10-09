@@ -1,0 +1,14 @@
+.footer {
+  background: $second-bg-color !important;
+
+  p {
+    font-size: 2rem;
+    margin-bottom: 0 !important;
+    padding: 2rem 0;
+    font-weight: 400;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.8rem;
+    }
+  }
+}

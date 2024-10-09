@@ -1,0 +1,15 @@
+.home-home {
+  background: $second-bg-color;
+}
+.home-fontEnd {
+  background: $second-bg-color !important;
+  color: $white !important;
+
+  a {
+    color: $white !important;
+  }
+  .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+}

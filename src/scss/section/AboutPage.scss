@@ -1,0 +1,269 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-content {
+    h1 {
+      font-size: 5.6rem;
+      font-weight: 700;
+      line-height: 1.3;
+
+      @include media-breakpoint-down(md) {
+        font-size: 5rem;
+      }
+    }
+    h3 {
+      font-size: 3.2rem;
+      font-weight: 700;
+
+      @include media-breakpoint-down(md) {
+        font-size: 2.6rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 2rem;
+      }
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-img img {
+    width: 35vw;
+    @include animationImage;
+
+    @include media-breakpoint-down(md) {
+      width: 70vw;
+      margin-top: 4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 90vw;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: $second-bg-color;
+
+  &-img img {
+    width: 35vw;
+
+    @include media-breakpoint-down(md) {
+      width: 70vw;
+      margin-top: 4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 90vw;
+    }
+  }
+
+  &-content {
+    h2 {
+      text-align: left;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.6rem;
+      margin: 2rem 0 3rem;
+    }
+  }
+}
+
+.services {
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 7rem;
+  }
+  h2 {
+    margin-bottom: 5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .services-box {
+      flex: 1 1 30rem;
+      background: $second-bg-color;
+      padding: 3rem 2rem 4rem;
+      border-radius: 2rem;
+      text-align: center;
+      border: 0.2rem solid $primary;
+      transition: 0.5s ease;
+
+      &:hover {
+        border-color: $main-color;
+        transform: scale(1.02);
+      }
+
+      i {
+        font-size: 7rem;
+        color: $main-color;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-size: 2.6rem;
+      }
+      p {
+        font-size: 1.6rem;
+        margin: 1rem 0 3rem;
+      }
+    }
+  }
+}
+
+.portfolio {
+  background: $second-bg-color;
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 7rem;
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 3rem;
+    }
+  }
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-box {
+      position: relative;
+      border-radius: 2rem;
+      box-shadow: 0 0 1rem $primary;
+      overflow: hidden;
+      display: flex;
+
+      img {
+        width: 100%;
+        transition: 0.5s ease;
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      .portfolio-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), $main-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 4rem;
+        transform: translateY(100%);
+        transition: 0.5s ease;
+
+        h4 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+          margin: 0.3rem 0 1rem;
+        }
+        a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 5rem;
+          height: 5rem;
+          background: $white;
+          border-radius: 50%;
+
+          i {
+            font-size: 2rem;
+            color: $second-bg-color;
+          }
+        }
+      }
+      &:hover .portfolio-layer {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.contact {
+  @include media-breakpoint-down(lg) {
+    min-height: auto;
+  }
+  h2 {
+    margin-bottom: 3rem;
+  }
+  form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    .input-box input,
+    textarea {
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      color: $white;
+      background: $second-bg-color;
+      border-radius: 0.8rem;
+      margin: 0.7rem 0;
+    }
+    textarea {
+      resize: none;
+    }
+
+    .input-box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      input {
+        width: 49%;
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+}

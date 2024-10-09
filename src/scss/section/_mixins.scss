@@ -1,0 +1,14 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//GRADIENT MIXIN
+@mixin gradient {
+  background: linear-gradient(
+    to right,
+    rgba($primary, 0.95),
+    rgba($secondary, 0.95)
+  );
+}
